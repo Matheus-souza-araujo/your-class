@@ -45,15 +45,20 @@ header {
 }
 
 .links a:hover {
-    color: var(--primary-color);
+    color: #05f911;
 }
 
-.links a:hover::after{
+.links a::after{
     content:"";
-    width: 100%;
+    width: 0;
     height: 2px;
-    background-color: var(--secondary-color);
+    background-color: #05f911;
     position: absolute;
     left: 0;
     bottom: -10px;
+}
+
+.links a:hover::after{
+    width: 100%;
+    transition: width 1300ms cubic-bezier(0.165, 0.84, 0.44, 1); /*para fazer a animação de transição da barrinha na header*/
 }
