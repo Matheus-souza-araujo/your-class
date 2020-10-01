@@ -9,10 +9,24 @@ exports.post = function(req, res){
             return res.send('Please, fill all files')
         }    
     }
-    req.body.birth = Date.parse(req.body.birth)
-    req.body.created_at = Date.now()
 
-    data.teachers.push(req.body)//vai adicionar o req.body no nosso array
+    let {avatar_url, birth, name, blood, acompanhamento, type} = req.body
+
+    birth = Date.parse(birth)
+    const created_at = Date.now()
+    const id =Number(data.teachers.length + 1)
+
+
+    data.teachers.push({
+        id,
+        name,
+        avatar_url,
+        birth,
+        blood,
+        type,
+        acompanhamento,
+        created_at
+    })//vai adicionar o req.body no nosso array
 
     fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err){
         if (err) return res.send("Write file error!")
