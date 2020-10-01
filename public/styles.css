@@ -140,3 +140,35 @@ header {
     text-transform: uppercase;
     font-size: 12px;
 }
+
+/*FORM*/
+
+input {
+    width: 100%;
+    outline: none;
+    font-size: 14px;
+    color: black;
+    font-weight: normal;
+}
+
+input[type="radio"]{ /*para selecionar apenas o tipo radio*/
+    width: initial;
+    margin-right: 4px;
+
+}
+
+input::placeholder{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+button[type="submit"]{ /*para selecionar apenas o tipo radio*/
+    padding: 8px 32px;
+    background-color: var(--secondary-color);
+    border-radius: 6px;
+    margin-top: 32px;
+    width: 100%;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+}

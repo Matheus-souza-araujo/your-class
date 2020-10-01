@@ -4,6 +4,7 @@ const routes = require("./routes")//puxando as rotas do routes.js
 
 const server = express() //executa o express, variavel express vira uma função
 
+server.use(express.urlencoded({ extended: true}))//faz funcionar o req.body
 server.use(express.static('public'))
 server.use(routes)
 
