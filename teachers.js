@@ -1,5 +1,28 @@
 const fs = require('fs')
 const data = require('./data.json')
+const { age } = require("./utils")
+
+//show
+exports.show = function(req, res){
+    // req.params
+    const { id } = req.params
+
+    const foundTeacher = data.teachers.find(function(teacher){
+        return teacher.id == id
+    })
+
+    if(!foundTeacher) return res.send("Teacher not found")
+    
+
+    const teacher = {
+        ...foundTeacher,
+        age: age(foundTeacher.birth),
+        acompanhamento: foundTeacher.acompanhamento.split(","),//split transforma a string em array
+        created_at:new Intl.DateTimeFormat('pt-BR').format(foundTeacher.created_at),//foi necessario instalar: "npm i intl"
+    }
+
+    return res.render("teachers/show", { teacher })
+}
 //create
 exports.post = function(req, res){
     const keys = Object.keys(req.body)//tranforma nossos dados em um array de chaves
@@ -36,6 +59,3 @@ exports.post = function(req, res){
 
 
 }
-//update
-
-//delete 
