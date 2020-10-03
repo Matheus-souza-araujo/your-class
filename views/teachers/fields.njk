@@ -1,0 +1,71 @@
+<div class="item">
+    <div>avatar URL</div>
+        <div>
+            <input 
+                type="url"
+                name="avatar_url"
+                placeholder="http://"
+            >{#O place holder serve para fazer um efeito no label para mostrar o que o campo aceita#}
+        </div>
+    </div>
+</div>
+
+<div class="item">
+    <div>Nome do Professor</div>
+    <div>
+        <input 
+            type="text"
+            name="name"
+        >
+    </div>
+</div>
+
+<div class="item">
+    <div>Data de nascimento</div>
+    <div>
+        <input 
+            type="date"
+            name="birth"
+        >
+    </div>
+</div>
+
+<div class="item">
+    <div>Grau de escolaridade</div>
+        <div>
+            <select name="blood">
+                <option value="EMC"{% if member.blood == "EMC" %}selected{% endif %}>
+                    Ensino médio completo
+                </option>
+                <option value="ESC"{% if member.blood == "ESC" %}selected{% endif %}>
+                    Ensino superior completo
+                </option>
+                <option value="ME"{% if member.blood == "ME" %}selected{% endif %}>
+                    Mestrado
+                </option>
+                <option value="DOU"{% if member.blood == "DOU" %}selected{% endif %}>
+                    Doutorado
+                </option> 
+            </select>
+        </div>
+    </div>
+</div>
+
+<div class="item">
+    <div>Tipo de aula</div>
+    <div>
+        <span><input type="radio" name="type" id="" value = "P" checked> Presencial </span>
+        <span><input type="radio" name="type" id="" value = "O"> À distância </span>
+    </div>
+</div>
+
+<div class="item">
+    <div>Acompanhamento</div>
+        <input 
+            type="text"
+            name="acompanhamento" 
+            placeholder="digite suas matérias por vírgula"
+        >
+</div>
+
+<button type="submit">Salvar</button> {#O submit serve para ele perceber que está no form e executar a ação de enviar#}

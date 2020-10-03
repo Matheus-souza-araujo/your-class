@@ -1,6 +1,7 @@
 const fs = require('fs')
 const data = require('./data.json')
-const { age } = require("./utils")
+const { age, grau } = require("./utils")
+const Intl = require('intl')
 
 //show
 exports.show = function(req, res){
@@ -17,8 +18,9 @@ exports.show = function(req, res){
     const teacher = {
         ...foundTeacher,
         age: age(foundTeacher.birth),
+        grau: grau(foundTeacher.blood),
         acompanhamento: foundTeacher.acompanhamento.split(","),//split transforma a string em array
-        created_at:new Intl.DateTimeFormat('pt-BR').format(foundTeacher.created_at),//foi necessario instalar: "npm i intl"
+        created_at:new Intl.DateTimeFormat('pt-BR').format(foundTeacher.created_at)//foi necessario instalar: "npm i intl"
     }
 
     return res.render("teachers/show", { teacher })

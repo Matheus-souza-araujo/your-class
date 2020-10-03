@@ -162,7 +162,8 @@ input::placeholder{
     font-weight: normal;
 }
 
-button[type="submit"]{ /*para selecionar apenas o tipo radio*/
+button[type="submit"],
+a.button { /*para selecionar apenas o tipo radio*/
     padding: 8px 32px;
     background-color: var(--secondary-color);
     border-radius: 6px;
@@ -171,4 +172,11 @@ button[type="submit"]{ /*para selecionar apenas o tipo radio*/
     color: black;
     font-weight: bold;
     font-size: 16px;
+}
+
+a.button{
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
 }

@@ -13,5 +13,24 @@ module.exports =  {
             age = age - 1
         }
         return age
-    }
+    },
+
+    grau:
+
+        function(type){
+            if (type == "EMC"){
+                return "Ensino médio completo"
+            }
+            if(type == "ESC"){
+                return "Ensino superior"
+            }
+            if(type == "ME"){
+                return "Mestrado"
+            }
+            if(type == "DOU"){
+                return "Doutorado"
+            }
+
+        }
 }
+
