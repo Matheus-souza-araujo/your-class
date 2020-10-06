@@ -1,21 +1,36 @@
-{% extends "layout.njk" %}               
+{% extends "layout.njk" %}
 
 {% block content %}
 
-<form class="card" method="POST" action="/teachers">{#aqui usamos o metodo POST que serve para enviar dados#}
-    <section 
-        class= "avatar" 
-        style= "background: url(https://source.unsplash.com/collection/1603248/500x500) no-repeat center center /cover">
-    </section>
-    {# no repeat serve para não se repetir a imagem pelo card; o center center serve para alinha ao centro; o cover cobre toda a ideia do widht e height #}
+  <div class="card">
+
+    <section class="avatar" style="background: url(https://source.unsplash.com/collection/3621148/500x500) no-repeat center center / cover"></section>
+
     <section class="details">
-        <h3>Novo Professor</h3>
 
-        {% include 'teachers/fields.njk'%}
-
+      <form method="POST" action="/teachers?_method=PUT">
         
+        <h3>Editar Instrutor(a)</h3>
 
-    </section>
+        {% include "teachers/fields.njk" %}
 
-</form>
+          <input 
+            type="hidden" 
+            name="id" 
+            value={{teacher.id}}
+          >
+          <div class="button-side">
+            <button type="submit">Salvar</button>          
+            <button type="submit" form="form-delete" id="red">Deletar</button>
+          </div>
+      </form>
+
+      <form id="form-delete" action="/teachers?_method=DELETE" method="POST">
+        <input type="hidden" name="id" value={{teacher.id}}>       
+      </form>
+
+    </section>   
+
+  </div>
+
 {% endblock content %}

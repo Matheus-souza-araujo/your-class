@@ -17,7 +17,10 @@ routes.get('/teachers/create', function(req,res){
 routes.get('/teachers/:id', teachers.show)
 
 routes.get('/teachers/:id/edit', teachers.edit)
+
 routes.post('/teachers', teachers.post)
+
+routes.put('/teachers', teachers.put)
 
 routes.get('/members', function(res, res){ //criando a rota
     return res.send("members")
