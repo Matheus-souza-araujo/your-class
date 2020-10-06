@@ -1,7 +1,5 @@
 module.exports =  {
-    age:
-    
-        function (timestamp){
+    age:function (timestamp){
         const today = new Date()
         const birthDate = new Date(timestamp)
          
@@ -15,9 +13,7 @@ module.exports =  {
         return age
     },
 
-    grau:
-
-        function(type){
+    grau:function(type){
             if (type == "EMC"){
                 return "Ensino médio completo"
             }
@@ -31,6 +27,16 @@ module.exports =  {
                 return "Doutorado"
             }
 
-        }
+        },
+
+    date: function(timestamp){
+        const date = new Date(timestamp)
+
+        const year = date.getUTCFullYear()
+        const month = `0${date.getUTCMonth() + 1}`.slice(-2)
+        const day = `0${date.getUTCDate()}`.slice(-2)
+
+        return (`${year}-${month}-${day}`)
+    }
 }
 
