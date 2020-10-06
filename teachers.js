@@ -25,6 +25,7 @@ exports.show = function(req, res){
 
     return res.render("teachers/show", { teacher })
 }
+
 //create
 exports.post = function(req, res){
     const keys = Object.keys(req.body)//tranforma nossos dados em um array de chaves
@@ -60,4 +61,18 @@ exports.post = function(req, res){
     })//JSON.stringify serve para transformar nosso objeto em JSON, o 2 é para dar 2 espaçamentos e quebrar a linha
 
 
+}
+
+//edit
+exports.edit = function(req,res) {
+
+    const { id } = req.params
+
+    const foundTeacher = data.teachers.find(function(teacher){
+        return teacher.id == id
+    })
+
+    if(!foundTeacher) return res.send("Teacher not found")
+
+    return res.render('teachers/edit',{ teacher:foundTeacher })
 }
