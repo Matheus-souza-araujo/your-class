@@ -22,6 +22,8 @@ routes.post('/teachers', teachers.post)
 
 routes.put('/teachers', teachers.put)
 
+routes.delete('/teachers', teachers.delete)
+
 routes.get('/members', function(res, res){ //criando a rota
     return res.send("members")
 })
