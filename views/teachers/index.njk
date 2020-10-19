@@ -2,46 +2,26 @@
 
 {% block content %}
 
-<div class="card">
-    <section 
-        class= "avatar" 
-        style= "background: url(https://source.unsplash.com/collection/1603248/500x500) no-repeat center center /cover">
-    </section>
-    {# no repeat serve para não se repetir a imagem pelo card; o center center serve para alinha ao centro; o cover cobre toda a ideia do widht e height #}
-    <section class="details">
-        <h3>Detalhes</h3>
-
-        <div class="item">
-            <div>Nome do Professor</div>
-            <div>Matheus de Souza Araujo</div>
-        </div>
-
-        <div class="item">
-            <div>Idade</div>
-            <div>18</div>
-        </div>
-
-        <div class="item">
-            <div>Grau de escolaridade</div>
-            <div>Doutorado</div>
-        </div>
-
-        <div class="item">
-            <div>Tipo de aula</div>
-            <div>presencial</div>
-        </div>
-
-        <div class="item">
-            <div>Acompanhamento</div>
-            <span>Computação</span>
-        </div>
-
-        <div class="item">
-            <div>Desde</div>
-            <div>18/02/2016</div>
-        </div>
-
-    </section>
-
+<div class="card table-container">
+   <table width ="100%">
+       {# cabeçalho #}
+       <thead>
+           <tr> {# linha #}
+               <th>Nome completo</th>{# colunas #}
+               <th>Acompanhamento</th>
+               <th>Ação</th>
+           </tr>
+       </thead>
+       {# corpo #}
+       <tbody>
+           {% for teacher in teachers%}
+           <tr>{# linha #}
+               <td><span style="background-image: url({{teacher.avatar_url}}"></span>{{teacher.name}}</td>
+                <td>{{teacher.acompanhamento}}</td>
+                <td><a href="teachers/{{teacher.id}}">Ver</a></td>
+           </tr>
+           {% endfor %}
+       </tbody>
+   </table>
 </div>
 {% endblock content %}

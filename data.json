@@ -1,16 +1,6 @@
 {
   "teachers": [
     {
-      "id": 2,
-      "name": "MATHEUS DE SOUZA ARAUJO",
-      "avatar_url": "https://scontent.fcac1-1.fna.fbcdn.net/v/t1.0-9/71202109_2461623434072421_6126962729702916096_o.jpg?_nc_cat=103&_nc_sid=174925&_nc_eui2=AeEMA2uEx-fbFHfA4jnymflTyqZ9C4ZW5OHKpn0Lhlbk4SrTsA5w5rQ1FrV4040QDohR1ZqFNXedoVyeR9qzGxsO&_nc_ohc=EukH0PCZ1pgAX8ylfuM&_nc_oc=AQmDmkcve4nSMjIi_UYCzSSjZtMT7-gvvWhk9UaW7cuzCB4lG2PCHcsJTIJ3MBhoFC0&_nc_ht=scontent.fcac1-1.fna&oh=a88f3f6e28c9ef33410c673010e4e467&oe=5F86A5F3",
-      "birth": 1005177600000,
-      "blood": "ESC",
-      "type": "P",
-      "acompanhamento": "computação",
-      "created_at": 1601690853994
-    },
-    {
       "id": 3,
       "name": "Davi de Souza Araujo",
       "avatar_url": "https://scontent.fcac1-1.fna.fbcdn.net/v/t1.0-9/73003531_2425894117531662_4213935011314794496_o.jpg?_nc_cat=107&_nc_sid=730e14&_nc_ohc=LNvwZGe65DYAX8AaTUk&_nc_ht=scontent.fcac1-1.fna&oh=b8fbcbe4aa9800baa878cfab730e4236&oe=5F9D836F",
@@ -19,6 +9,16 @@
       "type": "O",
       "acompanhamento": "Inglês",
       "created_at": 1601691049765
+    },
+    {
+      "id": 2,
+      "name": "MATHEUS DE SOUZA ARAUJO",
+      "avatar_url": "https://scontent.fcac1-1.fna.fbcdn.net/v/t1.0-9/52682533_2308966982671401_3892896320586776576_o.jpg?_nc_cat=111&_nc_sid=174925&_nc_eui2=AeFFwMIrkGPYZ_nLHMRnuaM6Udu-iDf9Y4ZR276IN_1jhoqDCcu4G69UPYRKd8udivXsuvLhgQb5O9OU0agmjebI&_nc_ohc=Xz-mcFlM4A4AX_Vbrwa&_nc_ht=scontent.fcac1-1.fna&oh=271a8b7e871fc50b1858c3b78de71307&oe=5FB21E66",
+      "birth": 1005177600000,
+      "blood": "DOU",
+      "type": "P",
+      "acompanhamento": "Programação web, data science, redes",
+      "created_at": 1603150205896
     }
   ]
 }
