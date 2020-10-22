@@ -1,0 +1,94 @@
+<div class="item">
+    <div>avatar URL</div>
+        <div>
+            <input 
+                type="url"
+                name="avatar_url"
+                placeholder="http://"
+                value="{{ student.avatar_url }}"
+            >{#O place holder serve para fazer um efeito no label para mostrar o que o campo aceita#}
+        </div>
+</div>
+
+<div class="item">
+    <div>Nome do Aluno</div>
+    <div>
+        <input 
+            type="text"
+            name="name"
+            value="{{ student.name}}"
+        >
+    </div>
+</div>
+
+<div class="item">
+    <div>Data de nascimento</div>
+    <div>
+        <input 
+            type="date"
+            name="birth"
+            value="{{ student.birth}}"
+        >
+    </div>
+</div>
+
+<div class="item">
+    <div>Ano escolar</div>
+        <div>
+            <select name="blood">
+                <option 
+                    value="5" {% if student.blood == "5" %}selected{% endif %}> 
+                    5º Ano do ensino fudamental
+                </option>
+
+                <option 
+                    value="6" {% if student.blood == "6" %}selected{% endif %}> 
+                    6º Ano do ensino fudamental
+                </option>
+
+                <option 
+                    value="7"{% if student.blood == "7" %}selected{% endif %}> 
+                    7º Ano do ensino fudamental
+                </option>
+
+                <option 
+                    value="8"{% if student.blood == "8" %}selected{% endif %}>
+                    8º Ano do ensino fudamental
+                </option> 
+
+                <option 
+                    value="9"{% if student.blood == "9" %}selected{% endif %}>
+                    9º Ano do ensino fudamental
+                </option> 
+
+                <option 
+                    value="1"{% if student.blood == "1" %}selected{% endif %}>
+                    1º Ano do ensino médio
+                </option> 
+
+                <option 
+                    value="2"{% if student.blood == "2" %}selected{% endif %}>
+                    2º Ano do ensino médio
+                </option> 
+
+                <option 
+                    value="3"{% if student.blood == "3" %}selected{% endif %}>
+                    3º Ano do ensino médio
+                </option> 
+
+            </select>
+        </div>
+</div>
+
+
+<div class="item">
+    <div>Acompanhamento</div>
+        <input 
+            type="text"
+            name="acompanhamento" 
+            placeholder="digite suas matérias por vírgula"
+            value="{{ student.acompanhamento }}"
+        >
+</div>
+
+<button type="submit">Salvar</button> {#O submit serve para ele perceber que está no form e executar a ação de enviar#}
