@@ -2,16 +2,16 @@
 
 {% block content %}
 
-<form class="card" method="POST" action="/teachers">{#aqui usamos o metodo POST que serve para enviar dados#}
+<form class="card" method="POST" action="/students">{#aqui usamos o metodo POST que serve para enviar dados#}
     <section 
         class= "avatar" 
-        style= "background: url({{teacher.avatar_url}}) no-repeat center center /cover">
+        style= "background: url(https://source.unsplash.com/collection/3465564/500x500) no-repeat center center / cover">
     </section>
     {# no repeat serve para não se repetir a imagem pelo card; o center center serve para alinha ao centro; o cover cobre toda a ideia do widht e height #}
     <section class="details">
-        <h3>Novo Professor</h3>
+        <h3>Novo Aluno</h3>
 
-        {% include 'teachers/fields.njk'%}
+        {% include 'students/fields.njk'%}
 
     </section>
 

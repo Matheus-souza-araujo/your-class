@@ -1,7 +1,8 @@
 const fs = require('fs')
 const data = require('../data.json')
-const { age, grau, date } = require("../utils")
+const { age, grau, date, ano } = require("../utils")
 const Intl = require('intl')
+const { json } = require('express')
 
 
 exports.index = function(req, res) {
@@ -22,7 +23,7 @@ exports.show = function(req, res){
     const student = {
         ...foundStudent,
         age: age(foundStudent.birth),
-        grau: grau(foundStudent.blood),
+        ano: ano(foundStudent.blood),
     }
 
     return res.render("students/show", { student })
@@ -34,39 +35,41 @@ exports.create = function(req,res){
 }
 
 //post
-exports.post = function(req, res){
-    const keys = Object.keys(req.body)//tranforma nossos dados em um array de chaves
+exports.post = function(req,res){
 
-    for(key of keys){
-        if (req.body[key] == ""){//mesma coisa que fazer req.body.avartar_url, e vai fazendo todas no for
-            return res.send('Please, fill all files')
-        }    
+    const keys = Object.keys(req.body) /*é um construtor*/
+
+    for (key of keys) {
+        //req.body.avatar_url
+        if (req.body[key] == ""){
+            return res.send("please, fill all fieds!")
+        }
+
     }
 
-    let {avatar_url, birth, name, blood, acompanhamento, type} = req.body
 
-    birth = Date.parse(birth)
-    const created_at = Date.now()
-    const id =Number(data.students.length + 1)
+    birth = Date.parse(req.body.birth) 
+    
+    let id = 1
+    const lastStudent = data.students[data.students.length - 1]
+    if (lastStudent){
+        id = lastStudent.id + 1
+    }
 
-
+    //[]
     data.students.push({
+        ...req.body,
         id,
-        name,
-        avatar_url,
-        birth,
-        blood,
-        type,
-        acompanhamento,
-        created_at
-    })//vai adicionar o req.body no nosso array
+        birth
+    }) // [{}]
 
     fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err){
         if (err) return res.send("Write file error!")
 
-        return res.redirect("/students")
-    })//JSON.stringify serve para transformar nosso objeto em JSON, o 2 é para dar 2 espaçamentos e quebrar a linha
+        return res.redirect('/students') 
+         
 
+    })
 
 }
 
@@ -83,7 +86,7 @@ exports.edit = function(req,res) {
 
     const student = {
         ...foundStudent,
-        birth: date(foundStudent.birth)
+        birth: date(foundStudent.birth).iso
     }
 
     return res.render('students/edit',{ student })
