@@ -1,14 +1,45 @@
 {
   "students": [
     {
-      "avatar_url": "http://google.com.br",
-      "name": "MATHEUS DE SOUZA ARAUJO",
-      "email": "matheus1mrs@gmail.com",
-      "birth": -27081216000000,
-      "blood": "5",
-      "charge": "80",
+      "avatar_url": "https://scontent.ftow3-1.fna.fbcdn.net/v/t1.0-9/119192379_2723075048020631_1929797232213453622_o.jpg?_nc_cat=108&_nc_sid=09cbfe&_nc_eui2=AeHO1wVPRctgQs5R1G6sZ2r10Rt1sXRwlxjRG3WxdHCXGPn8kgihN6rw-3TMCSwBXf3SzZTw3UnY4pnFqJj9mrJv&_nc_ohc=VQGT0kw5n5EAX81kZg7&_nc_ht=scontent.ftow3-1.fna&oh=6cd8d92d5b3f7ffabd3349e77d1df238&oe=5F7F5C63",
+      "name": "Teste",
+      "email": "teste@gmail.com",
+      "birth": -620524800000,
+      "blood": "3",
+      "charge": "100",
       "id": 1
     }
   ],
-  "teachers": []
+  "teachers": [
+    {
+      "id": 1,
+      "name": "MATHEUS DE SOUZA ARAUJO",
+      "avatar_url": "https://scontent.fcwb2-2.fna.fbcdn.net/v/t1.0-9/123009713_2822366374664790_2386275731139436682_n.jpg?_nc_cat=100&ccb=2&_nc_sid=09cbfe&_nc_eui2=AeHk-44ask-hE1ebNRsLMaCdGHinnE2UMXsYeKecTZQxe07qfZ-l1tSS5kL-SzfscaNunkkdLxlzTlqXphdT7-w7&_nc_ohc=Luae-OIChHkAX9Zg9DV&_nc_ht=scontent.fcwb2-2.fna&oh=fda1fce54a3af65be32e4fcf3aade788&oe=5FC11A9A",
+      "birth": 1005177600000,
+      "blood": "DOU",
+      "type": "P",
+      "acompanhamento": "computação",
+      "created_at": 1604107790254
+    },
+    {
+      "id": 2,
+      "name": "Gabriella Maas",
+      "avatar_url": "https://scontent.fcwb2-2.fna.fbcdn.net/v/t1.0-9/105946768_2652439615084175_2362746635589972919_o.jpg?_nc_cat=100&ccb=2&_nc_sid=174925&_nc_eui2=AeEKCzD7UdQfr4uhHMdN5QvbWAjDRoMyhPhYCMNGgzKE-KRwhhtkk5gZZ86B4KFsNs_ZcUFNHWyVIi9tR0ypAp5y&_nc_ohc=lUi8mwiZkjAAX-6E7l7&_nc_ht=scontent.fcwb2-2.fna&oh=068e0cbbb342c209dbc54f6bed933a3f&oe=5FC06161",
+      "birth": 1077753600000,
+      "blood": "DOU",
+      "type": "P",
+      "acompanhamento": "Biologia",
+      "created_at": 1604107865792
+    },
+    {
+      "id": 3,
+      "name": "Davi de Souza Araujo",
+      "avatar_url": "https://scontent.fcwb2-2.fna.fbcdn.net/v/t1.0-9/72698358_2425894584198282_7632054943943229440_o.jpg?_nc_cat=110&ccb=2&_nc_sid=730e14&_nc_eui2=AeE7CkL-7ThqPe1g--GQaBePHEhONr0OR7EcSE42vQ5HsSdEz_Y7L3HErj_MfOv1PpGwBFwglUNnbvkBsQj9vd23&_nc_ohc=TYtasUFNv80AX_Zr1Tw&_nc_ht=scontent.fcwb2-2.fna&oh=5272994bb13887e57ea0c528c1b72157&oe=5FC3FD5E",
+      "birth": 1351123200000,
+      "blood": "ME",
+      "type": "P",
+      "acompanhamento": "Inglês",
+      "created_at": 1604107970277
+    }
+  ]
 }

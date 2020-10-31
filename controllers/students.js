@@ -6,7 +6,11 @@ const { json } = require('express')
 
 
 exports.index = function(req, res) {
-    return res.render('students/index', { students: data.students })
+    const students = {
+        ...data.students,
+        ano: ano(data.students.blood)
+    }
+    return res.render('students/index', { students })
 }
 //show
 exports.show = function(req, res){

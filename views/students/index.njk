@@ -8,18 +8,21 @@
        {# cabeçalho #}
        <thead>
            <tr> {# linha #}
-               <th>Nome completo</th>{# colunas #}
-               <th>Acompanhamento</th>
+               <th>Nome completo</th>
+               <th>Ano escolar</th>{# colunas #}
+               <th>Email</th>
                <th>Ação</th>
            </tr>
        </thead>
        {# corpo #}
        <tbody>
-           {% for teacher in teachers%}
+           {% for student in students%}
+           <script>console.log("Cheguei")</script>
            <tr>{# linha #}
-               <td><span style="background-image: url({{teacher.avatar_url}}"></span>{{teacher.name}}</td>
-                <td>{{teacher.acompanhamento}}</td>
-                <td><a href="teachers/{{teacher.id}}">Ver</a></td>
+               <td><span style="background-image: url({{student.avatar_url}}"></span>{{student.name}}</td>
+                <td>{{student.ano}}</td>
+                <td>{{student.email}}</td>
+                <td><a href="students/{{students.id}}">Ver</a></td>
            </tr>
            {% endfor %}
        </tbody>
