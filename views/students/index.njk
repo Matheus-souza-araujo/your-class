@@ -18,14 +18,15 @@
        <tbody>
            {% for student in students%}
            <script>console.log("Cheguei")</script>
-           <tr>{# linha #}
+           <tr class="student">{# linha #}
                <td><span style="background-image: url({{student.avatar_url}}"></span>{{student.name}}</td>
-                <td>{{student.ano}}</td>
+                <td class="grades">{{student.year}}</td>
                 <td>{{student.email}}</td>
                 <td><a href="students/{{students.id}}">Ver</a></td>
            </tr>
            {% endfor %}
        </tbody>
    </table>
+   <script src="/indexStudents.js"></script>
 </div>
 {% endblock content %}
